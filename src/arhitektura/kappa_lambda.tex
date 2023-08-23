@@ -1,0 +1,16 @@
+\subsection{Arhitekturi Kappa in Lambda}
+
+Arhitekture Big Data so raznolike,
+ampak okvirno jih lahko uvrstimo v dva razreda: Kappa ali Lambda arhitekturo~\cite{kappa_lambda}.
+Lambda arhitektura vsebuje storitve za procesiranje podatkovnih tokov
+in za procesiranje paketov, medtem ko Kappa vsebuje samo storitve za
+procesiranje tokov in delo s paketi obravnava kot tokove z zakasnitvijo.
+
+Kappa in Lambda predstavljata dva načina razmišljanja in sicer posploševanje in
+specializacija.
+Kappa je posplošena, kar pomeni da nam ni treba pisati konfiguracij
+za storitve za delo s paketi in ni usklajevanja med storitvami,
+ampak zaradi tega je delovanje počasnejše, kot če bi imeli orodje,
+ki je specializirano za delo s paketi.
+Pri Lambdi je problem ravno obraten, imamo pravo orodje,
+ampak moramo usklajevati konfiguracijo med storitvami za tokove in za pakete.
