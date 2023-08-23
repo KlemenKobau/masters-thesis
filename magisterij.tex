@@ -1,0 +1,244 @@
+% !TeX spellcheck = sl_SI
+% vim: set spell spelllang=sl:
+% za preverjanje črkovanja, če se uporablja Texstudio ali vim
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage[utf8]{inputenc}  % pravilno razpoznavanje unicode znakov
+
+% NASLEDNJE UKAZE USTREZNO POPRAVI
+\newcommand{\program}{IŠRM} % ime studijskega programa
+\newcommand{\imeavtorja}{Klemen Kobau} % ime avtorja
+\newcommand{\imementorja}{izr.~prof.~dr. Mojca Ciglarič} % akademski naziv in ime mentorja, uporabi poln naziv, prof.~dr.~, doc.~dr., ali izr.~prof.~dr.
+\newcommand{\imesomentorja}{as. Miha Grohar} % akademski naziv in ime somentorja, če ga imate
+\newcommand{\naslovdela}{Avtomatizacija namestitve aplikacije “Big Data” v privatni in javni oblak}
+\newcommand{\letnica}{2022} % letnica magistriranja
+\newcommand{\opis}{Delo obravnava integracijo po ω-kompleksih, njene lastnosti in posplošitve
+na Levy-jeve topološke prostore.}  % Opis dela v eni povedi. Ne sme vsebovati matematičnih simbolov v $ $.
+\newcommand{\kljucnebesede}{integracija\sep kompleks} % ključne besede, ločene z \sep, da se PDF metapodatki prav procesirajo
+\newcommand{\keywords}{integration\sep complex} % ključne besede v angleščini
+\newcommand{\organization}{Univerza v Ljubljani, Fakulteta za matematiko in fiziko} % fakulteta
+\newcommand{\literatura}{literatura}  % pot do datoteke z literaturo (brez .bib končnice)
+\newcommand{\sep}{, }  % separator med ključnimi besedami v besedilu
+% KONEC PODATKOV
+
+\usepackage{bibentry}         % za navajanje literature v programu dela s celim imenom
+\nobibliography{\literatura}
+\newcommand{\plancite}[1]{\item[\cite{#1}] \bibentry{#1}} % citiranje v programu dela
+
+% OBSOLETE \usepackage{filecontents}  % za pisanje datoteke s PDF metapodatki
+\usepackage{silence} \WarningFilter{latex}{Overwriting file}  % odstrani annoying warning o obstoju datoteke
+% datoteka s PDF metapodatki, zgenerira se kot magisterij.xmpdata
+\begin{filecontents*}{\jobname.xmpdata}
+  \Title{\naslovdela}
+  \Author{\imeavtorja}
+  \Keywords{\kljucnebesede}
+  \Subject{matematika}
+  \Org{\organization}
+\end{filecontents*}
+
+\usepackage[a-1b]{pdfx}  % zgenerira PDF v tem PDF/A-1b formatu, kot zahteva knjižnica
+\hypersetup{bookmarksopen, bookmarksdepth=3, colorlinks=true,
+  linkcolor=black, anchorcolor=black, citecolor=black, filecolor=black,
+  menucolor=black, runcolor=black, urlcolor=black, pdfencoding=auto,
+  breaklinks=true, psdextra}
+
+\usepackage[slovene]{babel}  % slovenščina
+\usepackage[autostyle=false, style=german]{csquotes}
+\usepackage[T1]{fontenc}     % naprednejše kodiranje fonta
+\usepackage{amsmath,amssymb,amsfonts,amsthm} % matematični paketi
+\usepackage{graphicx}     % za slike
+\graphicspath{ {./images/} }
+\usepackage{emptypage}    % prazne strani so neoštevilčene, ampak so štete
+\usepackage{units}        % fizikalne enote kot \unit[12]{kg} s polovico nedeljivega presledka, glej primer v kodi
+%\usepackage{makeidx}      % za stvarno kazalo, lahko zakomentiraš, če ne rabiš
+%\makeindex                % za stvarno kazalo, lahko zakomentiraš, če ne rabiš
+% oblika strani
+\usepackage[
+  top=3cm,
+  bottom=3cm,
+  inner=3.5cm,      % margini za dvostransko tiskanje
+  outer=2.5cm,
+  footskip=40pt     % pozicija številke strani
+]{geometry}
+\usepackage{floatrow}
+
+% VEČ ZANIMIVIH PAKETOV
+% \usepackage{array}      % več možnosti za tabele
+% \usepackage[list=true,listformat=simple]{subcaption}  % več kot ena slika na figure, omogoči slika 1a, slika 1b
+% \usepackage[all]{xy}    % diagrami
+\usepackage{doi}        % za clickable DOI entrye v bibliografiji
+% \usepackage{enumerate}     % več možnosti za sezname
+
+% Za pisanje psevdokode
+% \usepackage{algpseudocode}  % za psevdokodo
+% \usepackage{algorithm}
+% \floatname{algorithm}{Algoritem}
+% \renewcommand{\listalgorithmname}{Kazalo algoritmov}
+
+% DRUGI TVOJI PAKETI:
+% tukaj
+\usepackage[nocompress]{cite}
+\usepackage{xargs}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=orange,backgroundcolor=orange!25,bordercolor=orange,#1]{#2}}
+
+\usepackage[
+    left = \glqq{},% 
+    right = \grqq{},% 
+    leftsub = \glq{},% 
+    rightsub = \grq{} %
+]{dirtytalk}
+
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Primer}
+
+\usepackage{appendix}
+\renewcommand{\appendixname}{Priloga}
+\renewcommand{\appendixtocname}{Priloge}
+\renewcommand{\appendixpagename}{Priloge}
+
+\usepackage{tabularx}
+\newcolumntype{L}{X}
+\newcolumntype{S}{>{\hsize=.5\hsize}X}
+\newcolumntype{Q}{>{\hsize=.1\hsize}X}
+
+\setlength{\overfullrule}{50pt} % označi predlogo vrstico
+\pagestyle{plain}               % samo številka strani na dnu, nobene glave / noge
+
+\newcounter{phaseCounter}
+\setcounter{phaseCounter}{1}
+\newcommand{\phase}[1]{\subsection{Faza \arabic{phaseCounter}: #1} \stepcounter{phaseCounter}}
+
+\newcommand{\tablegraphics}[1]{\vspace{1pt plus 1pt minus 0pt} \includegraphics[scale = 0.3]{#1}}
+
+% \DeclareMathOperator{\tr}{tr}  % morda potrebuješ operator za sled ali kaj drugega?
+
+% bold matematika znotraj \textbf{ }, tudi v naslovih, kot \omega spodaj
+\makeatletter \g@addto@macro\bfseries{\boldmath} \makeatother
+
+% Poimenuj kazalo slik kot ``Kazalo slik'' in ne ``Slike''
+\addto\captionsslovene{
+  \renewcommand{\listfigurename}{Kazalo slik}%
+}
+
+% če želiš, da se poglavja začnejo na lihih straneh zgoraj
+%\let\oldsection\section
+%\def\section{\cleardoublepage\oldsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%           DOCUMENT           %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\pagenumbering{roman} % začnemo z rimskimi številkami
+\thispagestyle{empty} % ampak na prvi strani ni številke
+
+\noindent{\large
+UNIVERZA V LJUBLJANI\\[1mm]
+FAKULTETA ZA MATEMATIKO IN FIZIKO\\[5mm]
+
+\noindent UNIVERZA V LJUBLJANI\\[1mm]
+FAKULTETA ZA RAČUNALNIŠTVO IN INFORMATIKO\\[5mm]
+\program\ -- 2.~stopnja}
+% ustrezno dopolni za IŠRM
+\vfill
+
+\begin{center}
+  \large
+  \imeavtorja\\[3mm]
+  \Large
+  \textbf{\MakeUppercase{\naslovdela}}\\[10mm]
+  \large
+  Magistrsko delo \\[1cm]
+  Mentorica: \imementorja \\[2mm] % ustrezno popravi spol
+  Somentor: \imesomentorja   % dodaj, če potrebno
+\end{center}
+\vfill
+
+\noindent{\large Ljubljana, \letnica}
+
+\cleardoublepage
+
+%% sem pride IZJAVA O AVTORSTVU  -- SE NATISNE V VIS
+
+% zahvala
+\pdfbookmark[1]{Zahvala}{zahvala} %
+\section*{Zahvala}
+Neobvezno.
+Zahvaljujem se \dots
+% end zahvala -- izbriši vse med zahvala in end zahvala, če je ne rabiš
+
+\cleardoublepage
+
+\pdfbookmark[1]{\contentsname}{kazalo-vsebine}
+\tableofcontents
+
+% list of figures
+% \cleardoublepage
+% \pdfbookmark[1]{\listfigurename}{kazalo-slik}
+% \listoffigures
+% end list of figures
+
+\cleardoublepage
+
+\input{src/kratice.tex}
+
+\cleardoublepage
+
+\section*{Program dela}
+\addcontentsline{toc}{section}{Program dela} % dodajmo v kazalo
+
+\section*{Osnovna literatura}
+
+\vspace{2cm}
+\hspace*{\fill} Podpis mentorja: \phantom{prostor za podpis}
+
+\vspace{2cm}
+\hspace*{\fill} Podpis somentorja: \phantom{prostor za podpis}
+
+\cleardoublepage
+\pdfbookmark[1]{Povzetek}{abstract}
+
+\begin{center}
+\textbf{\naslovdela} \\[3mm]
+\textsc{Povzetek} \\[2mm]
+\end{center}
+Tukaj napišemo povzetek vsebine. Sem sodi razlaga vsebine in ne opis tega, kako je delo
+organizirano.
+
+\vfill
+\begin{center}
+\textbf{English translation of the title} \\[3mm] % prevod slovenskega naslova dela
+\textsc{Abstract}\\[2mm]
+\end{center}
+
+An abstract of the work is written here. This includes a short description of
+the content and not the structure of your work.
+
+\vfill\noindent
+\textbf{Math.~Subj.~Class.~(2010):} oznake kot 74B05, 65N99, na voljo so na naslovu
+\url{http://www.ams.org/msc/msc2010.html} \\[1mm]
+\textbf{Ključne besede:} \kljucnebesede \\[1mm]
+\textbf{Keywords:} \keywords
+
+\cleardoublepage
+
+\setcounter{page}{1}    % od sedaj naprej začni zopet z 1
+\pagenumbering{arabic}  % in z arabskimi številkami
+
+% CONTENT
+
+\listoftodos[TODO]
+
+\cleardoublepage                           % na desni strani
+\phantomsection                            % da prav delujejo hiperlinki
+\addcontentsline{toc}{section}{\bibname}   % dodajmo v kazalo
+\bibliographystyle{fmf-sl}                 % uporabljen stil je v datoteki fmf-sl.bst, na voljo tudi angleška verzija
+\bibliography{\literatura}                 % literatura je v datoteki, definirani na začetku
+% TeXStudio zmede \ zgoraj, tako da lahko notri napišeš dejansko ime .bib datoteke, če ti
+% ne delajo predlogi citatov.
+
+\end{document}
