@@ -1,0 +1,46 @@
+<mxfile host="65bd71144e">
+    <diagram id="UQVwSRVEOGTSrHlklx5u" name="Page-1">
+        <mxGraphModel dx="1151" dy="782" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="OA8j4a0CtdmLD3B7S07l-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="120" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="OA8j4a0CtdmLD3B7S07l-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="20" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="OA8j4a0CtdmLD3B7S07l-3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="250" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="OA8j4a0CtdmLD3B7S07l-4" value="Kafka" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="50" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="OA8j4a0CtdmLD3B7S07l-5" value="Opensearch" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="379" y="60" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="OA8j4a0CtdmLD3B7S07l-6" value="OS Dashboards" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="130" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="OA8j4a0CtdmLD3B7S07l-7" value="Kafka" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="280" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="OA8j4a0CtdmLD3B7S07l-8" value="Opensearch" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="379" y="300" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="OA8j4a0CtdmLD3B7S07l-9" value="Opensearch" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="220" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="OA8j4a0CtdmLD3B7S07l-10" value="OS Dashboards" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="360" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="OA8j4a0CtdmLD3B7S07l-11" value="Keycloak" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="140" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="OA8j4a0CtdmLD3B7S07l-12" value="Kafka" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="210" width="70" height="70" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

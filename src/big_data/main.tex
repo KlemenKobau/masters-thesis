@@ -1,0 +1,97 @@
+\section{Big data}
+
+Definicija Big data še ni ustaljena.
+Članek~\cite{toward_scalable_systems_big_data_analytics} predstavi 3 definicije.
+
+\paragraph{Definicija preko lastnosti}
+Big data aplikacije obdelujejo podatke z naslednjimi lastnostmi, katerimi se
+skupno reče 4V, po angleških besedah za lastnosti.
+Članek~\cite{modeling_requirements_big_data} navede tu še nekaj razlogov za izbrane 
+lastnosti\footnote{Podatki so iz leta 2013, številke so se samo še povečale.}.
+
+\begin{itemize} \label{list:four_v}
+    \item Volumen podatkov (\emph{Volume}) -- Aplikacija uporablja velike količine podatkov (več terabajtov, petabajtov, zetabitov)
+    \begin{itemize}
+        \item Članek~\cite{modeling_requirements_big_data} napoveduje, da bo do leta 2020 generiranih 40 zetabitov podatkov 
+        \footnote{Vir~\cite{big_data_amount_statista} to številko poveča na 64 zetabitov}, kar je 300 kratno povečanje od leta 2005
+        \item 6 od 7 biljonov ljudi ima mobilni telefon
+        \item Večina podjetij v ZDA ima vsaj 100 terabitov shranjenih podatkov
+    \end{itemize}
+
+    \item Hitrost podatkovnih tokov (\emph{Velocity}) -- Podatki so generirani v realnem času, ali skoraj v realnem času
+    \begin{itemize}
+        \item Newyorška borza shrani 1 terabit podatkov med vsako trgovsko sejo
+        \item Moderni avtomobili imajo skoraj 100 senzorjev
+    \end{itemize}
+    
+    \item Raznolikost podatkov (\emph{Variety}) -- podatkovni modeli so manj strokturirani, imamo več virov podatkov
+    \begin{itemize}
+        \item Od leta 2011 je bila ocena velikosti podatkov okoli 150 Exabitov
+        \item Uporabniki YouTube pogledajo več kot 4 miljarde ur videoposnetkov vsak mesec
+        \item 400 miljonov tweetov se pošlje vsak dan 
+    \end{itemize}
+
+    \item Zaupanje v podatke (\emph{Veracity}) -- podatki so lahko napačni, napake v podatkih.
+    \begin{itemize}
+        \item 1 izmed 3 vodilnih podjetij ne zaupa podatkom, katere uporabijo za odločitve 
+    \end{itemize}
+\end{itemize}
+
+\paragraph{Definicija preko primerjave}
+Big data pomeni delo s količino podatkov, ki jo tradicionalne baze ne podpirajo.
+
+\paragraph{Definicija preko arhitekture}
+Big data pomeni delo s podatki, kjer njihova količina preprečuje uporabo
+tradicionalnih baz in potrebujemo precejšnje horizontalno skaliranje.
+
+\bigskip
+
+\noindent Big data nima ustaljene definicije, ampak s prej napisanimi si lahko pomagamo pri razumevanju razlik
+pri delu z big data in tradicionalnim delom s podatki.
+
+\subsection{Primerjava s tradicionalnimi podatki}
+
+Članek~\cite{toward_scalable_systems_big_data_analytics} primerja delo s tradicionalnimi podatki in z big data.
+Iz razlik med vrstama lažje razumemo zakaj tradicionalne metode za obdelavo podatkov niso primerne za obdelavo big data podatkov.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l l l} 
+& Tradicionalni & Big Data \\
+\hline
+Volumen & GB & se povečuje (TB, PB, EB) \\
+Hitrost generiranja & vsako uro, dan & hitreje kot tradicionalni \\
+Struktura & strukturirani & delno ali nestrukturirani \\
+Viri & centralizirani & razpršeni \\
+Integriteta & enostavna & težka \\
+Shramba & relacijska & HDFS ali NoSQL \\
+Dostop & interaktiven & v sklopih ali v realnem času
+\end{tabular}
+\caption{Primerjava podatkov v big data in v navadnih aplikacijah. Tabela je prevedena iz~\cite{toward_scalable_systems_big_data_analytics}.}
+\label{table:big-data-vs-normal}
+\end{table}
+
+\subsection{Izzivi in priložnosti Big Data}
+
+\todo{Napiši kaj o izzivih in priložnostih. O tem imam nek članek.}
+
+\subsection{Primeri big data aplikacij}
+Avtorji~\cite{vehicle_networks} predstavijo način izboljšave prenosa podatkov med vozili.
+Uporabijo povezave naprava-naprava, kjer skupine avtomobilov skupaj tvorijo center za oddajo podatkov, ki
+so zelo zahtevani in je zahtevkov preveč za eno samo vozilo.
+Soočajo se z velikimi količinami podatkov, kjer kjer lahko deli arhitekture nenadoma odpovejo.
+Podatki so nestrukturirani in generirani v realnem času.
+
+Članek~\cite{a_big_data_analytics_based_methodology} govori o uporabi big data za sprejemanje strateških odločitev
+pri trgovanju.
+Avtorji nadgradijo CRISP-DM\todo{dodaj v slovarček, opiši, citiraj} metodologijo.
+Izboljšano metodologijo nato uporabijo za analizo trgov.
+
+Avtorji~\cite{scalable_framework_for_provisioning_large_scale_iot_deployments} predstavijo orodje LEONORE,
+ki omogoča elastično postavljanje ogrodja za aplikacije na meji\todo{edge computing, dodaj prevod}.
+Soočijo se s težavo postavljanja procesorsko zahtevnih aplikacij na napravah z malo procesorske moči.
+\improvement{Dopolni}
+
+Več primerov big data aplikacij na različnih področjih si lahko preberete v~\cite{big_data_analytics_societal_impact}.
+
+\todo{Dodaj več primerov}

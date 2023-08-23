@@ -1,0 +1,116 @@
+\section{Metodologije}
+
+\subsection{Metodologije na splošno}
+SSKJ metodologijo definira kot \say{skupek metod, ki se uporabljajo pri kakem raziskovanju, mišljenju}~\cite{metodologija_def}.
+V računalništvu nam metodologije pomagajo pri odločitvah glede vodenja projektov.
+Mnogi programerji jih vsaj okvirno poznajo, kar pospeši uvajanje.
+
+\subsection{Primeri metodologij}
+V računalništvu imamo kar nekaj razširjenih metodologij.
+Te metodologije nam predpisujejo načine programiranja,
+cikle oddajanja programske kode,
+načine sodelovanja s stranko in druge dele razvoja.
+Spodaj jih opišem samo par~\cite{agile_methodologies}.
+
+\paragraph{Scrum} predpisuje majhne ekipe, ki sledijo predpisanemu šprintu~\cite{scrum_meth}.
+Tega pripravi vodja Scruma (\textit{angl. Scrum master})
+na podlagi ciljev, ki jih zastavi lastnik produkta (\textit{angl. Product owner}).
+Vsak šprint traja predpisano dolžino časa, ponavadi en mesec ali manj.
+Na začetku vsakega se izvede načrtovanje, kjer se odgovori na naslednja vprašanja:
+
+\begin{itemize}
+    \item Zakaj delamo ta šprint?
+    \item Kaj lahko naredimo v tem šprintu?
+    \item Kako lahko naredimo naše cilje v tem šprintu?
+\end{itemize}
+
+Scrum predpisuje vsakodnevne petnajst minutne sestanke,
+kjer se pregleda uspešnost šprinta in uvede spremembe,
+če so te potrebne.
+Na koncu šprinta se najprej izvede pregled, kjer se pregleda narejeno in 
+kaj se bo delalo naprej, 
+nato pa se ekipa posvetuje o načinih izboljšave v naslednjem šprintu.
+Šprinti se ponavljajo, dokler ni delo končano.
+
+\paragraph{Kanban} uporablja tabla, na kateri so
+razporejene naloge glede na stanje~\cite{kanban_meth,kanban_book}.
+Tabla je lahko digitalna ali fizična in na njej so naloge ločene
+v predpisane stolpce, ki predstavljajo različna stanja nalog, na primer
+\textit{čaka}, \textit{v teku}, \textit{v pregledu}, \textit{končano}.
+Kanban priporoča omejevanje števila nalog v posameznih stolpcih,
+saj delo na več nalogah poslabša efektivnost.
+Ne uporablja iteracij, ampak namesto tega meri čas do izdelave
+posamezne naloge.
+
+\paragraph{Ekstramno programiranje}
+predstavlja skupek praks~\cite{extreme_prog_meth, waterfall_meth}.
+En del je opisan v tabeli~\ref{tab:extreme_programming}.
+Lahko uporabimo eno, vse ali samo nek del praks.
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{S S L} 
+        Praksa & Angleško & Opis \\ \hline
+        
+        Igra načrtovanja & Planning game & Stranke se odločijo za obseg
+        in časovnico izdaj glede na ocene programerjev.
+        Programerji implementirajo samo funkcionalnosti,
+        v trenutni iteraciji. \\
+
+        Majhne oddaje & Small releases &
+        Sistem se odda v produkcijo že kmalu po začetku dela in
+        izboljšave se redno oddajajo. \\
+
+        Testiranje & Tests & Testi se pišejo sproti in
+        med implementacijo se preverja,
+        da se ni noben test padel. \\
+
+        Programiranje v paru & Pair programming &
+        Koda se piše v paru,
+        kjer oba uporabljata isti računalnik.
+
+    \end{tabularx}
+    \caption{Prakse v extremnem programiranju~\cite{extreme_prog_meth}.}
+    \label{tab:extreme_programming}
+\end{table}
+
+\paragraph{Slapovno programiranje} je način razvoja~\cite{waterfall_meth},
+kjer aplikacije programiramo v predpisanem vrstnem redu.
+Na začetku določimo sistemske in aplikacijske zahteve.
+Nato se naredi analizo problema,
+zasnuje aplikacijo in nato se celotna aplikacija sprogramira.
+Na koncu se aplikacijo testira in odda v produkcijo.
+
+V osnovni verziji slapovnega programiranja se ne vračamo nazaj na prejšnji korak,
+ampak kasneje so uporabniki te metodologije
+sprejemali vračanje nazaj tudi v direktni predhodni korak.
+
+\paragraph{Devops} je združitev razvijalnega in operacijskega dela~\cite{devops_meth}.
+Predlaga sprotno in avtomatizirano testiranje, ter sprotno objavljanje v produkcijo.
+Želi avtomatizirati tudi operacijske dele,
+na primer definicija infrastrukture v kodi.
+
+\subsection{Primerjava tradicionalnih in big data metodologij}
+
+\subsection{Obstoječe big data metodologije}
+V članku \cite{iterative_methodology} avtorji predstavijo iterativno metodo za zasnovo arhitekture big data aplikacij.
+Njihov algoritem najprej naredi graf vozlišč, kjer vsako predstavlja skupek tehnologij, ki služijo podobni funkciji.
+V naslednjih korakih se tehnologije določijo bolj podrobno.
+Algoritem za vstop potrebuje analizo zahtev same aplikacije, npr. kako močno konsistenco ali hitro aplikacijo potrebujemo.
+
+Članek~\cite{bigprovision} govori o sistemu, ki ponuja postavitve ogrodja za big data aplikacije.
+Govori o razvoju PaaS\todo{Dodaj v slovar kratic.} in kako ponudniki javnih oblakov poskrbijo za infrastrukturo big
+data aplikacij.
+Opisan sistem lahko z vzorcem vhodnih podatkov in uporabnikovih omejitev virov, sam naredi postavitev
+in izbere uporabljene tehnologije.
+
+Članek~\cite{modeling_requirements_big_data} uporabi i* 
+(imenovano tudi Grajenje zahtev s poudarkom na agentih \emph{angl. Agent oriented Reqirement Engineering})
+in KAOS (\emph{angl. Knowledge acquisition in automated specification}) metodologiji, ki sta implementaciji
+GORE (\emph{angl. Goal-oriented requirement engineering})~\cite{goal_oriented_requirements_engineering}.
+Metodologija i* se problema loti s poudarkom na agentih, kjer je agent uporabnik
+ali storitev z neko določeno nalogo.
+Določi cilje in naloge, ter medsebojne odvisnosti med agenti, cilji in nalogami.
+Diagram se nato razširi z nalogami, katere je potrebno izpolniti za dosego ciljev.
+Metodologija KAOS gradi diagrame s tem ko razlaga \emph{zakaj} nek del potrebujemo.
+V članku navede zehteve, ki izhajajo iz 4V in nato kako jih lahko dosežemo.

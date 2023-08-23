@@ -1,0 +1,214 @@
+<mxfile host="65bd71144e">
+    <diagram id="eqqj5dHO_TQrNgUn9p8M" name="Page-1">
+        <mxGraphModel dx="1011" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="27" value="" style="edgeStyle=none;html=1;fontSize=14;" edge="1" parent="1" source="3" target="18">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="65" y="280" width="175" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Nepremični" style="text;strokeColor=none;fillColor=none;html=1;fontSize=11;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="75" y="350" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.427;entryY=1.001;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=11;" edge="1" parent="1" source="6" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.61;entryY=-0.059;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=11;" edge="1" parent="1" source="6" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Mobilnost" style="text;strokeColor=none;fillColor=none;html=1;fontSize=11;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="65" y="400" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Tokovi" style="text;strokeColor=none;fillColor=none;html=1;fontSize=11;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="450" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;" edge="1" parent="1" source="10" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=none;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;startArrow=none;startFill=0;" edge="1" parent="1" source="10" target="14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" style="edgeStyle=none;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;startArrow=none;startFill=0;" edge="1" parent="1" source="10" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Struktura" style="text;strokeColor=none;fillColor=none;html=1;fontSize=11;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="165" y="410" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Strukturirani" style="text;strokeColor=none;fillColor=none;html=1;fontSize=11;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="370" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Delno &lt;br&gt;strukturirani" style="text;strokeColor=none;fillColor=none;html=1;fontSize=11;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="165" y="340" width="72.5" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Nestrukturirani" style="text;strokeColor=none;fillColor=none;html=1;fontSize=11;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="145" y="450" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="edgeStyle=none;html=1;fontSize=14;" edge="1" parent="1" source="18" target="24">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="80" width="120" height="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Podatkovni viri" style="text;strokeColor=none;fillColor=none;html=1;fontSize=14;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="117.5" y="300" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Izluščenje&lt;br&gt;podatkov" style="text;strokeColor=none;fillColor=none;html=1;fontSize=14;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="285" y="130" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="edgeStyle=none;html=1;fontSize=14;" edge="1" parent="1" source="24" target="28">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="80" width="120" height="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Nalaganje in&lt;br&gt;predprocesiranje&lt;br&gt;podatkov" style="text;strokeColor=none;fillColor=none;html=1;fontSize=14;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="425" y="130" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="edgeStyle=none;html=1;fontSize=14;" edge="1" parent="1" source="28" target="31">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="540" y="80" width="120" height="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Procesiranje&lt;br&gt;podatkov" style="text;strokeColor=none;fillColor=none;html=1;fontSize=14;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="565" y="130" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="" style="edgeStyle=none;html=1;fontSize=14;" edge="1" parent="1" source="31" target="37">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="80" width="120" height="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Analiza&lt;br&gt;podatkov" style="text;strokeColor=none;fillColor=none;html=1;fontSize=14;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="705" y="130" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.005;entryY=0.635;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;startArrow=classic;startFill=1;" edge="1" parent="1" source="37" target="40">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="820" y="80" width="120" height="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="Nalaganje in&lt;br&gt;transformacija&lt;br&gt;podatkov" style="text;strokeColor=none;fillColor=none;html=1;fontSize=14;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="845" y="130" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="960" y="80" width="120" height="490" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="Vizualizacija" style="text;strokeColor=none;fillColor=none;html=1;fontSize=14;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="985" y="130" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="Izluščenje" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="315" width="100" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="Izluščenje&lt;br&gt;iz podatkovnih&lt;br&gt;tokov" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="360" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="Prenos,&lt;br&gt;nalaganje" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="300" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="Stiskanje&lt;br&gt;podatkov" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="360" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="Procesiranje&lt;br&gt;podatkovnih&amp;nbsp;&lt;br&gt;tokov" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="250" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="Izluščenje&lt;br&gt;informacij" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="320" width="100" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="Združevanje" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="375" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="Podvajanje" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="413" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="Globoka&lt;br&gt;analiza&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Izlu%C5%A1%C4%8Denje%26lt%3Bbr%26gt%3Binformacij%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfontSize%3D14%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22550%22%20y%3D%22320%22%20width%3D%22100%22%20height%3D%2245%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="690" y="300" width="100" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="Analiza&lt;br&gt;podatkovnih&lt;br&gt;tokov" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="690" y="355" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="Transformacija" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="830" y="260" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="Prenos,&lt;br&gt;nalaganje" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="830" y="300" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="Vizualizacija" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="970" y="240" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="Grafični&lt;br&gt;vmestnik" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="970" y="280" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="Končni&lt;br&gt;uporabnik" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="970" y="330" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="480" width="700" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="Podatkovna&lt;br&gt;shramba" style="text;strokeColor=none;fillColor=none;html=1;fontSize=14;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="565" y="490" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="Začasna&lt;br&gt;shramba&lt;br&gt;podatkov&lt;br&gt;tokov" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="490" width="95" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="Začasna&lt;br&gt;shramba&lt;br&gt;podatkov" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="590" width="95" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="Surovi&lt;br&gt;podatki" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="415" y="490" width="95" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="Poslovni podatki" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="555" y="520" width="95" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="Peskovnik" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="555" y="576" width="95" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="Podatki za&lt;br&gt;pripravo" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="552.5" y="612" width="95" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="Podatki&lt;br&gt;tokov" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="552.5" y="662" width="95" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="Rezultati&lt;br&gt;analize" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="692.5" y="500" width="95" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="Naročniki&lt;br&gt;izdelovalci" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="695" y="556" width="95" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="Rezultati&lt;br&gt;analize&lt;br&gt;tokov" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="695" y="612" width="95" height="68" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="Strežniška&lt;br&gt;baza" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="835" y="491" width="95" height="59" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="720" width="700" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="Specifikacija&lt;br&gt;modela" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="760" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="Modeli" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="384" y="770" width="95" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="Naloge in specifikacija modela" style="text;strokeColor=none;fillColor=none;html=1;fontSize=14;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="540" y="730" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="Strojno&lt;br&gt;učenje" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="494" y="770" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="Specifikacija&lt;br&gt;nalog" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="609" y="770" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="Naloge" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="770" width="95" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="Razporejanje&lt;br&gt;nalog" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="830" y="770" width="100" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
