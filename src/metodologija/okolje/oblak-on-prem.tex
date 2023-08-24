@@ -1,1 +1,50 @@
-\subsubsection{Uporaba oblaka}
+\subsubsection{Uporaba lastne strojne opreme ali oblaka} \label{subsub:oblak-on-prem}
+
+Pri izbiri okolja, se moramo najprej odločiti, ali bomo uporabljali lastne strežnike ali
+storitve v oblaku.
+Članki~\cite{cloud_computing_issues_challanges,cloud_computing_overview,cloud_computing_today_tomorrow}
+predstavijo prednosti in slabosti infrastrukture v oblaku.
+V tabeli~\ref{tab:cloud-vs-local-infrastructure} predstavim povzetek primerjave uporabe oblačne in
+lastne infrastrukture.
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{S L L} 
+        & Lokalno & Oblak \\
+        \hline
+        
+        Skaliranje & 
+        Se lahko prilagodi, 
+        ampak stroškov nakupa strežnikov ne povrnemo & 
+        Se prilagaja zahtevam \\
+
+        Zasebnost podatkov &
+        Podatki ne zapustijo naših strežnikov &
+        Podatki se pošiljajo preko omrežja,
+        lahko v tuje države,
+        na tuje sisteme \\
+
+        Stroški &
+        Skupni stroški infrastrukture so višji, 
+        stroški posamezne enote procesiranja (npr. ene virtualne naprave), so nižji &
+        Skupni stroški infrastrukture so nižji, stroški prenosa podatkov so višji \\
+        
+        Migracija &
+        Migracija med lastnimi strežniki je enostavna &
+        Migracija med ponudniki je težka \\
+
+        Dostopnost &
+        Ponavadi nižja &
+        Ponavadi višja
+    \end{tabularx}
+    
+    \caption{Primerjava infrastrukture v oblaku in lokalno.}
+    \label{tab:cloud-vs-local-infrastructure}
+\end{table}
+
+\noindent Tabela~\ref*{tab:cloud-vs-local-infrastructure} nam pomaga pri izbiri
+okolja.
+V naslednjih odsekih bodo naše odločitve odvisne od izbire v tem poglavju.
+Takrat se bomo sklicevali na to poglavje in razložili,
+na kaj moramo biti pazljivi in kakšne so razlike zaradi odločitve
+v tem odseku.

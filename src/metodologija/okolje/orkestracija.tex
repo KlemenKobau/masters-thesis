@@ -1,1 +1,49 @@
 \subsubsection{Orkestracija}
+
+V tem poglavju se odločamo o izbiri orkestracije ali
+ročnega nadziranja aplikacij.
+Orodja za orkestracijo skrbijo za nemoteno delovanje aplikacij.
+V primerjavi z ročnim upravljanjem orodje za orkestracijo samo skrbi za:
+\begin{itemize}
+    \item Ugašanje aplikacij, ki so obtičale.
+    \item Povezovanjem med aplikacijami.
+    \item Zunanjo shrambo.
+    \item Skaliranje aplikacij.
+\end{itemize}
+
+\noindent Članek~\cite{virtualisation_vs_containerization} primerja uporabo
+vsebnikov z uporabo navideznih naprav in primerja
+nazlične implementacije orodij za delo z vsebniki.
+Moderne aplikacije so sestavljene iz mnogih storitev, zato se za
+lažje delo z vsebniki priporoča uporaba orodij za orkestracijo~\cite{container_orchestration}.
+Članek~\cite{container_orchestrators_comparison} primerja različne implementacije.
+Avtorji priporočajo uporabo Docker Compose ali Docker swarma za testiranje,
+ter uporabo Kubernetesa za produkcijo.
+Članek~\cite{container_orchestration} primerja implementacije bolj podrobno in
+prav tako predlaga Kubernetes,
+ampak opozarja na visoko porabo virov v določenih primerih.
+Oba članka kot eno izmed možnosti omenjata tudi Apache Mesos,
+ki pa ima manjšo bazo uporabnikov in je bolj zahteven za postavitev.
+Za primere testiranja predlagamo uporabo orodja Minikube,
+ki omogoča enostavno postavitev testne Kubernetes gruče.
+
+Nadaljevanje magistrske naloge se nagiba k uporabi orkestracije,
+saj z rastjo arhitekture postane ročno uporavljanje z aplikacijami preveč
+zapleteno.
+V primeru, da se odločite za ročno upravljanje je potrebno vsak del
+arhitekture postaviti po navodilih razvijalca.
+Vključitev v magistrsko nalogo je preveč zahtevna,
+saj nameščanje vsebuje preveč spremenljivk, na primer 
+od operacijskega sistema in tipa podatkovnega sistema.
+
+V primeru, da smo se v poglavju~\ref{subsub:oblak-on-prem} odločili za uporabo oblaka,
+nam naš ponudnik pogosto ponuja tudi že uporabo njhovega
+orodja za orkestracijo.
+V tem primeru, nam v tem koraku ni potrebno narediti ničesar,
+drugače pa moramo orodje za orkestracijo postaviti sami.
+Če smo izbrali orodje Kubernetes, si lahko pomagamo z orodji \textit{Kubespray} in \textit{kubeadm}
+za lažjo postavitiv Kubernetesa.
+
+\bigskip
+
+\noindent V naslednjem poglavju bomo zgradili arhitekturo okoli 

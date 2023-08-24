@@ -1,1 +1,72 @@
 \subsubsection{Virtualizacija}
+
+V tem poglavju se odločimo,
+ali bomo uporabljali virtualizacijo,
+ali nameščali aplikacijo neposredno na operacijski sistem.
+Članek~\cite{virtualization_survey} predstavi prednosti in slabosti virtualizacije,
+kar predstavim v nadaljevanju.
+
+\bigskip
+
+\noindent Prednosti:
+\begin{itemize}
+    \item Prilagodljivost, virtualne naprave lahko prenašamo 
+    iz enega računalnika na drugega.
+    So neodvisne od strojne opreme.
+
+    \item Razpoložljivost, v primeru ustavitve strojne opreme,
+    lahko virtualno napravo prestavimo na drug računalnik in
+    naprava tam normalno deluje naprej.
+
+    \item Skalabilnost, nove navidezne naprave enostavno dodamo.
+    Z dodajanjem strojne opreme navidezne naprave enostavno prenesemo nanjo.
+
+    \item Izraba strojne opreme, navidezne naprave porabijo spomin,
+    ki ga gostitelj ne uporablja.
+
+    \item Varnost, stroitve so izolirane ena od druge
+    \item Cena, več manjših strežnikov lahko nadomestimo z enim večjim,
+    kar ponavadi skupno zniža ceno.
+    \item Prilagodljivost na zahtevnost dela, navideznim napravam 
+    lahko dodelimo samo toliko virov, kot jih potrebuje
+    \item Prerazporeditev obremenitve, v primeru visoke obremenitve na
+    enem računalniku, lahko navidezne naprave migriramo na drugega in
+    tako prerazporedimo obremenitev
+    \item Podpora za storitve, ki zahtevajo določen operacijski sistem
+\end{itemize}
+
+\noindent Slabosti:
+\begin{itemize}
+    \item Virtualizacija pobere sistemske vire že sama od sebe
+    \item Še vedno obstaja odvisnost od strojne opreme
+    (v primeru izpada elektrike izgubimo tudi dostop do navidezne naprave).
+    \item Ko izberemo orodje za virtualizacijo, smo nanj vezani.
+    Migracija ni vedno enostavna.
+    \item Cena licenc orodij za virtualizacijo.
+\end{itemize}
+
+\noindent Glede na napisane prednosti in slabosti se odločimo,
+ali želimo uporabljati virtualne naprave ali ne.
+V poglavju~\ref{subsub:oblak-on-prem} smo se odločali med oblakom in
+uporabo lastne strojne opreme.
+
+V primeru, da smo se odločili za lastno strojno opremo,
+se moramo odločiti za vrsto hipervizorja,
+ki jo želimo uporabljati.
+Obstaja več vrst hipervizorjev in vsaka ima svoje prednosti
+in slabosti, ki pa so precej tehnične in izven obsega te magistrske naloge.
+
+V primeru, da smo se odločili za oblak,
+se moramo odločati med najemom virtualk ali najemov samih fizičnih strojev.
+V primeru najema fizičnih strojev postane naša izbira podobna izbiri
+lastne strojne opreme in moramo hipervizor namestiti sami.
+V primeru najema virtualk, pa nam ponudnik oblaka sam zagotovi
+virtualke in nam tako v tem koraku ni potrebno narediti nič dodatnega.
+
+V naslednjem poglavju se bomo odločali o uporabi vsebnikov in
+orodij za orkestracijo.
+Vsebniki imajo podobne prednosti in slabosti kot
+virtualke, ampak na nivoju aplikacije.
+Uporaba virtualk na izbiro uporabe orkestracije ne vpliva,
+med tem ko ima izbira oblaka podoben vpliv kot pri
+izbiri virtualizacije.
