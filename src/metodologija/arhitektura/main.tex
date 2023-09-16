@@ -36,7 +36,21 @@ Generična predstavitev je predstavljena v sliki~\ref{fig:generic-arch-applicati
 
 Procesi in zahteve imajo lahko posebne lastnosti,
 ki omejujejo izbor zunanjih storitev.
-Kot primer izberimo, da mora biti aplikacija visoko dostopna.
+Lastnosti lahko definiramo sami, nekateri primeri so predstavljeni v tabeli 1 v članku~\cite{iterative_methodology},
+kjer lastnosti storitev definirajo iz lastnosti big data,
+ki smo jih predstavili v odseku~\ref{sec:big-data}.
+Primeri lastnosti so na primer:
+\begin{itemize}
+    \item Volumen podatkov
+    \item Hitrost podatkovnih tokov
+    \item Raznolikost podatkov
+    \item Zaupanje v podatke
+    \item Strukturiranost podatkov
+\end{itemize}
+
+Lastnosti so lahko prisotne ali ne, na primer ali neka baza podpira nestrukturirane podatke ali ne,
+ter prisotne na spektru, na primer kako hitro deluje.
+Za arhitekturo v tem poglavju želimo, da bo aplikacija visoko dostopna.
 V naši generični predstavitvi ta primer predstavimo s procesom 1 in pomeni,
 da mora biti proces 1 in njegove zahteve visoko dostopni.
 Dodana omejitev je predstavljena v sliki~\ref{fig:generic-arch-application-labels}.
@@ -66,3 +80,110 @@ Arhitektura po dodatku storitev je predstavljena v sliki~\ref{fig:generic-servic
     \caption{Arhitektura s storitvami.}
     \label{fig:generic-services}
 \end{figure}
+
+V naslednjem odseku predstavimo primere tehnologij in njihove lastnosti.
+Predstavili bomo par tehnologij iz vsake skupine in predstavili skupine na splošno.
+
+\subsubsection{Izbira storitev}
+V tem odseku predstavimo skupine orodij,
+ki se pogosto uporabljajo pri delu z big data.
+Skupine opišemo in predstavimo nekaj tehnologij,
+ki spadajo v posamezno skupino.
+Pri vsaki skupini napišemo lastnosti, katere tehnologije v njej zagotavljajo.
+
+\paragraph{Obdelava podatkovnih tokov}
+Zaradi povečanja količine in hitrosti podatkov potrebujemo nove tehnologije,
+ki lahko podatke hitro obdelajo in pošljejo naprej.
+Pri tem želimo, da so tehnologije visoko dostopne in da ponujajo zagotovila dostavljanja.
+Delo s podatkovnimi tokovi ločimo na delo s
+podatkovnimi paketi in delo s pravimi podatkovnimi tokovi.
+Glavna razlika je, da podatkovne tokove uporabljamo,
+ko imajo sveži podatki zelo veliko vrednost, ki hitro pada,
+na primer opozorila o potresih.
+Razlike so bolj podrobno predstavljene v tabeli~\ref{tab:stream-batch}.
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{S L L}
+                          & Podatkovni paketi          & Podatkovni tokovi                                                                  \\ \hline
+        Podatki           & Podatkovni paketi.         & Tok svežih podatkov ali posodobitev.                                               \\
+        Velikost podatkov & Znana v naprej in omejena. & Neskončna ali ni znana v naprej.                                                   \\
+        Strojna oprema    & Več CPU.                   & Večinoma en CPU in omejena količina spomina.                                       \\
+        Shramba           & Baza.                      & Ni shrambe, ali večina shranjena v spominu.                                        \\
+        Procesiranje      & Več krogov procesiranja.   & En ali par krogov.                                                                 \\
+        Trajanje          & Dolgo.                     & Par sekund ali milisekund.                                                         \\
+        Aplikacije        & Pogosta uporaba.           & Izluščenje podatkov iz spleta, nadziranje prometa, obdelava podatkov iz senzorjev.
+    \end{tabularx}
+
+    \caption{Primerjava procesiranja podatkovnih tokov in podatkovnih paketov.
+        Primerjava je povzeta po tabeli 1 iz~\cite{stream_analysis_systematic_literature_review}.}
+    \label{tab:stream-batch}
+\end{table}
+
+Zagotovila dostavljanja ločimo na:
+\begin{itemize}
+    \item Največ enkrat, najlažja implementacija. Podatek se posreduje največ enkrat.
+    \item Vsaj enkrat, srednje težka implementacija. Podatek se dostavi vsaj enkrat, kjer
+          ob neuspeli dostavitvi ponovno poskušamo.
+    \item Natanko enkrat, najtežja implementacija. Podatek se dostavi natanko enkrat.
+\end{itemize}
+
+Članek~\cite{stream_analysis_systematic_literature_review} v tabeli 9 predstavi
+nekatere tehnologije za obdelavo podatkovnih tokov.
+Povzetek tabele je v tabeli~\ref{tab:stream-tools}.
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{L L L L L}
+                        & Tip tokova                                & Zakasnitev & Propustnost & Zagotovitev dostavljanja \\ \hline
+        BlockMon        & Tokovi                                    & Zelo nizka & Visoka      & Vsaj enkrat              \\
+        Spark streaming & Paketi, tokovi in posamično               & Nizka      & Visoka      & Natanko enkrat           \\
+        Apache Storm    & Tokovi                                    & Zelo nizka & Visoka      & Vsaj enkrat              \\
+        Yahoo! S4       & Tokovi                                    & Nizka      & Nizka       & Natanko enkrat           \\
+        Apache Samza    & Paketi in tokovi                          & Zelo nizka & Visoka      & Vsaj enkrat              \\
+        Apache Flink    & Paketi, tokovi, posamično in interaktivno & Zelo nizka & Visoka      & Natanko enkrat           \\
+        Apache Aurora   & Tokovi                                    & Nizka      & Visoka      & Vsaj enkrat
+    \end{tabularx}
+
+    \caption{Povzetek lastnosti orodij za procesiranje podatkovnih tokov.
+        Tabela je povzeta po tabeli 9 iz~\cite{stream_analysis_systematic_literature_review}.}
+    \label{tab:stream-tools}
+\end{table}
+
+Iz tabele~\ref{tab:stream-tools} lahko definiramo lastnosti zunanjih storitev,
+glede na katere nato izberemo ustrezno orodje.
+Vsaka napisana tehnologija ima še druge lastnosti, na primer na katere baze se lahko poveže.
+
+\paragraph{Razpršen podatkovni sistem}
+
+Pri delu z Big Data potrebujemo način za shranjevanje velikih količin podatkov.
+En računalnik nima dovolj procesorske moči in predstalja eno točko odpovedi.
+Želimo imeti način hrambe podatkov čez več računalnikov,
+ki nam zagotavlja visoko dostopnost in odpornost na odpovedi.
+
+Uporabimo lahko razpršene podatkovne sisteme~\cite{distributed_file_systems, big_data_review},
+ki se trudijo biti tem bolj podobni navadnemu podatkovnemu sistemu,
+samo da so uporabniki razpršenega podatkovnega sistema med sabo ločeni.
+Tehnologija je namenjena dolgotrajni hrambi podatkov in njihovemu paralelnemu procesiranju.
+Članek~\cite{analysiss_six_distributed} predstavi analizo šestih razpršenih podatkovnih sistemov.
+Primerjava iz članka je predstavljena v tabeli~\ref{tab:distributed-fs-comparison}.
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{L L L L}
+                            & HDFS               & Ceph              & GlusterFS         \\ \hline
+        Arhitektura         & Centralizirana     & Razpršena         & Decentralizirana  \\
+        Dostopnost sistema  & Ena točka odpovedi & Visoka dostopnost & Visoka dostopnost \\
+        Dostopnost podatkov & Visoka             & Visoka            & RAID              \\
+        Replikacija         & Asinhrona          & Sinhrona          & Sinhrona          \\
+        Delitev obremenitve & Avtomatsha         & Ročna             & Ročna
+    \end{tabularx}
+
+    \caption{Primerjava razpršenih podatkovnih sistemov.
+        Primerjava je povzeta po tabeli 3.1 iz~\cite{analysiss_six_distributed}.}
+    \label{tab:distributed-fs-comparison}
+\end{table}
+
+\subsubsection{Transformacija lastnosti}
+
+\subsection{Posodabljanje arhitekture}
