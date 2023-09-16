@@ -184,6 +184,102 @@ Primerjava iz članka je predstavljena v tabeli~\ref{tab:distributed-fs-comparis
     \label{tab:distributed-fs-comparison}
 \end{table}
 
+\paragraph{NoSQL}
+Big Data je pogosto vsebuje nestrukturirane podatke,
+katere želimo hitro shranjevati.
+Za delo z njim se je razvila nova veja podatkovnih baz,
+imenovanih NoSQL podatkovne baze.
+Te baze ponujajo večjo hitrost, dostopnost in odpornost na
+odpovedi, na račun konsistence podatkov~\cite{nosql,perf_comp_sql_nosql}.
+NoSQL podatkovne baze delimo na več tipov,
+kjer ima vsak tip svoje prednosti in slabosti~\cite{nosql_types,nosql_survey}.
+Vsak tip NoSQL baz ima svoje prednosti in lastnosti, katere na kratko predstavimo v naslednjih odstavkih.
+
+V ključ-vrednostnih podatkovnih bazah shranjujemo podatke na ključe.
+Struktura podatkov ni pomembna.
+Moderne ključ-vrednostne podatkovne baze dajejo prednost
+skalabilnosti namesto konsistence podatkov.
+Ta tip podatkovnih baz ne ponuja stikov kot SQL podatkovne baze,
+saj lahko poizvedujemo samo po ključu.
+V zameno za to omejitev nam ključ vrednostne podatkovne baze ponujajo hitre
+poizvedbe in visoko skalabilnost~\cite{nosql_types}.
+
+V dokumentinih podatkovnih bazah shranjujemo
+podatke podobno kot v ključ-vrednostne podatkovne baze.
+Podatke shranjujemo na določen ključ,
+kjer so podatki v nekem standardnem formatu, npr. XML, PDF ali JSON.
+
+V stolpičnih podatkovnih bazah je vsak ključ povezan z več stolpci,
+ki so razpršeni med različnimi fizičnimi stroji.
+Podatki so shranjeni tako, da omogočijo hitro agregacijo podatkov.
+
+Grafovske podatkovne baze shranjujejo podatke v grafih,
+kjer so informacije v obliki vozlišč in povezav.
+Poudarek je na povezavah med podatki.
+Te podatkovne baze je težje poganjati na gručah strojev in
+večinoma imajo lastnosti ACID.
+Uporabljajo se za podatke, ki tvorijo omrežja na primer
+priporočilni sistemi, bioinformatika, socialna omrežja in podobno.
+
+Članek~\cite{nosql} v tabeli 1 predstavi nekaj primerov NoSQL podatkovnih baz in jih med
+sabo primerja.
+Povzetek tabele je predstavljen v tabelah~\ref{tab:nosql-comparison-document}, \ref{tab:nosql-comparison-column}
+in~\ref{tab:nosql-comparison-key-value}, posebaj pa predstavimo še grafovsko podatkovno bazo Neo4J.
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{L S S}
+        Lastnost                  & MongoDB & CouchDB \\ \hline
+        MapReduce                 & Da      & Da      \\
+        Atomarnost                & Pogojna & Da      \\
+        Konsistenca               & Da      & Da      \\
+        Izolacija                 & Ne      & Da      \\
+        Transakcije               & Ne      & Ne      \\
+        Horizontalna skalabilnost & Da      & Da      \\
+    \end{tabularx}
+
+    \caption{Primerjava dokumentinih NoSQL podatkovnih baz.
+        Primerjava je povzeta po tabeli 1 iz članka~\cite{nosql}.}
+    \label{tab:nosql-comparison-document}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{L S S S S }
+        Lastnost                  & DynamoDB & HBase & Cassandra & Accumulo \\ \hline
+        MapReduce                 & Da       & Da    & Da        & Da       \\
+        Atomarnost                & Da       & Da    & Da        & Pogojna  \\
+        Konsistenca               & Da       & Da    & Da        & Da       \\
+        Izolacija                 & Da       & Ne    & Ne        & /        \\
+        Transakcije               & Ne       & Da    & Ne        & Da       \\
+        Horizontalna skalabilnost & Da       & Da    & Da        & Da       \\
+    \end{tabularx}
+
+    \caption{Primerjava stolpičnih NoSQL podatkovnih baz.
+        Primerjava je povzeta po tabeli 1 iz članka~\cite{nosql}.}
+    \label{tab:nosql-comparison-column}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{L S S}
+        Lastnost                  & Redis & Riak \\ \hline
+        MapReduce                 & Ne    & Da   \\
+        Atomarnost                & Da    & Ne   \\
+        Konsistenca               & Da    & Ne   \\
+        Izolacija                 & Da    & Da   \\
+        Transakcije               & Da    & Ne   \\
+        Horizontalna skalabilnost & /     & Da   \\
+    \end{tabularx}
+
+    \caption{Primerjava ključ-vrednostnih NoSQL podatkovnih baz.
+        Primerjava je povzeta po tabeli 1 iz članka~\cite{nosql}.}
+    \label{tab:nosql-comparison-key-value}
+\end{table}
+
+Neo4J ne podpira MapReduce, podpira atomarnost, ponuja konsistenco in izolacijo,
+ponuja transakcije in ni horizontalno skalabilen.
+
 \subsubsection{Transformacija lastnosti}
 
 \subsection{Posodabljanje arhitekture}

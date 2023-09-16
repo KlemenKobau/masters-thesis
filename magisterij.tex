@@ -99,7 +99,7 @@ na Levy-jeve topološke prostore.}  % Opis dela v eni povedi. Ne sme vsebovati m
 \renewcommand{\appendixtocname}{Priloge}
 \renewcommand{\appendixpagename}{Priloge}
 
-\usepackage{tabularx}
+\usepackage{multirow, tabularx}
 \newcolumntype{L}{X}
 \newcolumntype{S}{>{\hsize=.5\hsize}X}
 \newcolumntype{Q}{>{\hsize=.1\hsize}X}
@@ -137,12 +137,12 @@ na Levy-jeve topološke prostore.}  % Opis dela v eni povedi. Ne sme vsebovati m
 \thispagestyle{empty} % ampak na prvi strani ni številke
 
 \noindent{\large
-UNIVERZA V LJUBLJANI\\[1mm]
-FAKULTETA ZA MATEMATIKO IN FIZIKO\\[5mm]
+  UNIVERZA V LJUBLJANI\\[1mm]
+  FAKULTETA ZA MATEMATIKO IN FIZIKO\\[5mm]
 
-\noindent UNIVERZA V LJUBLJANI\\[1mm]
-FAKULTETA ZA RAČUNALNIŠTVO IN INFORMATIKO\\[5mm]
-\program\ -- 2.~stopnja}
+  \noindent UNIVERZA V LJUBLJANI\\[1mm]
+  FAKULTETA ZA RAČUNALNIŠTVO IN INFORMATIKO\\[5mm]
+  \program\ -- 2.~stopnja}
 % ustrezno dopolni za IŠRM
 \vfill
 
@@ -203,16 +203,16 @@ Zahvaljujem se \dots
 \pdfbookmark[1]{Povzetek}{abstract}
 
 \begin{center}
-\textbf{\naslovdela} \\[3mm]
-\textsc{Povzetek} \\[2mm]
+  \textbf{\naslovdela} \\[3mm]
+  \textsc{Povzetek} \\[2mm]
 \end{center}
 Tukaj napišemo povzetek vsebine. Sem sodi razlaga vsebine in ne opis tega, kako je delo
 organizirano.
 
 \vfill
 \begin{center}
-\textbf{English translation of the title} \\[3mm] % prevod slovenskega naslova dela
-\textsc{Abstract}\\[2mm]
+  \textbf{English translation of the title} \\[3mm] % prevod slovenskega naslova dela
+  \textsc{Abstract}\\[2mm]
 \end{center}
 
 An abstract of the work is written here. This includes a short description of
